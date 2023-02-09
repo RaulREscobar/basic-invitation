@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <v-card class="text-center pt-3" color="#EEDAF9">
+        <v-card class="text-center py-4" color="#EEDAF9">
             <v-icon color="#884EC3" icon="mdi-map-marker" size="70" type="outline"></v-icon>
             <v-card-title class="text-center">
                 LOS ESPERAMOS EN...

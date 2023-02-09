@@ -8,14 +8,6 @@
 
             <v-form ref="form">
                 <v-card-text>
-                    ¿Que musica te gusta?
-                </v-card-text>
-                <v-row justify="center" class="mx-auto">
-                    <v-checkbox v.model="music" value="rock" label="ROCK"></v-checkbox>
-                    <v-checkbox v.model="music" value="cumbia" label="CUMBIA"></v-checkbox>
-                    <v-checkbox v.model="music" value="trap" label="TRAP"></v-checkbox>
-                </v-row>
-                <v-card-text>
                     ¿Que bebida te gustaria tomar?
                 </v-card-text>
                 <v-row justify="center" class="mx-auto">
@@ -47,7 +39,6 @@
 export default {
     data() {
         return {
-            music: [],
             bebida: [],
             bebidas: ["Fernet", "Campari", "Gancias", "Gaseosa/agua"]
         }

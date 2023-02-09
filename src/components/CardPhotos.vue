@@ -1,6 +1,6 @@
 <template>
     <v-container>
-        <v-card class="text-center">
+        <v-card class="text-center py-4">
             <v-icon color="#884EC3" icon="mdi-image" size="70" type="outline"></v-icon>
             <v-card-title class="text-center">
                 ALGUNAS FOTITOS...
