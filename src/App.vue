@@ -14,6 +14,7 @@
       <Confirm />
       <Gift />
       <DressCode />
+      <Spotify />
     </v-main>
   </v-app>
 </template>
@@ -29,4 +30,5 @@ import Gift from './components/Gift.vue';
 import HeaderName from './components/HeaderName.vue';
 import Mis15 from './components/Mis15.vue';
 import Paragraph from './components/Paragraph.vue';
+import Spotify from './components/Spotify.vue';
 </script>
