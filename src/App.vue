@@ -15,6 +15,7 @@
       <Gift />
       <DressCode />
       <Spotify />
+      <Footer />
     </v-main>
   </v-app>
 </template>
@@ -31,4 +32,5 @@ import HeaderName from './components/HeaderName.vue';
 import Mis15 from './components/Mis15.vue';
 import Paragraph from './components/Paragraph.vue';
 import Spotify from './components/Spotify.vue';
+import Footer from  './components/Footer.vue'
 </script>
