@@ -35,7 +35,7 @@
 
 
             <v-card-actions class="d-flex justify-space-around align-center mt-4">
-                <v-btn variant="tonal" color="black">
+                <v-btn variant="tonal" color="#884EC3">
                     Enviar
                 </v-btn>
             </v-card-actions>

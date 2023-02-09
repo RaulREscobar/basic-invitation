@@ -13,7 +13,7 @@
             <v-img src="https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg" height="150">
             </v-img>
             <v-card-actions class="d-flex justify-space-around align-center mt-4">
-                <v-btn variant="tonal" color="black">
+                <v-btn variant="tonal" color="#884EC3">
                     ¿Como llegar?
                 </v-btn>
             </v-card-actions>
