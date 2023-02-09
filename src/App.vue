@@ -13,6 +13,7 @@
       <CardTask />
       <Confirm />
       <Gift />
+      <DressCode />
     </v-main>
   </v-app>
 </template>
@@ -23,6 +24,7 @@ import CardPhotos from './components/CardPhotos.vue';
 import CardTask from './components/CardTask.vue';
 import Confirm from './components/Confirm.vue';
 import Count from './components/Count.vue';
+import DressCode from './components/DressCode.vue';
 import Gift from './components/Gift.vue';
 import HeaderName from './components/HeaderName.vue';
 import Mis15 from './components/Mis15.vue';
