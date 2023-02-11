@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <v-main>
+      <BtnMusic />
       <HeaderName />
       <Count />
       <Paragraph text="Hay momentos que no se pueden borrar
@@ -32,5 +33,6 @@ import HeaderName from './components/HeaderName.vue';
 import Mis15 from './components/Mis15.vue';
 import Paragraph from './components/Paragraph.vue';
 import Spotify from './components/Spotify.vue';
-import Footer from  './components/Footer.vue'
+import Footer from './components/Footer.vue'
+import BtnMusic from './components/BtnMusic.vue'
 </script>
