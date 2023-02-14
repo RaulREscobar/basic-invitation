@@ -1,7 +1,7 @@
 <template>
   <v-app>
-    <v-main>
-      <BtnMusic />
+    <BtnMusic />  
+    <v-main> 
       <HeaderName />
       <Count />
       <Paragraph text="Hay momentos que no se pueden borrar

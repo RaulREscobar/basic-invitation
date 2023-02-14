@@ -14,7 +14,6 @@ import { ref } from 'vue';
 const player = ref(new Audio(song));
 const isPlaying = ref(true);
 
-console.log(isPlaying.value)
 let play = () => {
     player.value.play();
     isPlaying.value = false;
