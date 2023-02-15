@@ -2,7 +2,7 @@
     <v-btn icon="mdi-play-circle-outline" v-if="isPlaying" @click="play()" variant="tonal" color="#884EC3"
         position="fixed">
     </v-btn>
-    <v-btn v-else="isPlaying" icon="mdi-pause-circle-outline" @click="pause()" variant="tonal" color="#884EC3"
+    <v-btn v-else icon="mdi-pause-circle-outline" @click="pause()" variant="tonal" color="#884EC3"
         position="fixed">
     </v-btn>
 </template>
