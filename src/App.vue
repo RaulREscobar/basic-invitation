@@ -1,9 +1,9 @@
 <template>
   <v-app>
+    <HeaderName />
+    <BtnMusic v-show="user.userLogget" />
     <Login v-if="!user.userLogget" />
     <v-main v-else>
-      <BtnMusic />
-      <HeaderName />
       <Count />
       <Paragraph text="Hay momentos que no se pueden borrar
         personas que no se pueden olvidar
@@ -37,9 +37,8 @@ import Spotify from './components/Spotify.vue';
 import Footer from './components/Footer.vue'
 import BtnMusic from './components/BtnMusic.vue'
 import Login from './components/Login.vue';
-
+//Stores
 import { useAuthStore } from './stores/AuthStore';
 
 const user = useAuthStore();
-console.log(user.userLogget)
 </script>

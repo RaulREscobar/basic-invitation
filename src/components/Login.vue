@@ -1,22 +1,26 @@
 <template>
-    <v-form v-model="form" @submit.prevent="onSubmit">
-        <v-container>
-            <v-row>
-                <v-col cols="12" md="4">
-                    <v-text-field label="E-mail" type="email" required></v-text-field>
-                </v-col>
+    <v-container class="">
+        <Paragraph text="Hola!!! esta es mi invitacion a mis 15
+        pero antes debes ingresar tu nombre y contraseña que te mandamos por privado." />
+        <v-form v-model="form" @submit.prevent="onSubmit">
+            <v-container class="">
+                <v-row>
+                    <v-col cols="12" md="4">
+                        <v-text-field color="#884EC3" label="E-mail" type="email" required></v-text-field>
+                    </v-col>
+                    <v-col cols="12" md="4">
+                        <v-text-field color="#884EC3" label="Contraseña" type="password" required></v-text-field>
+                    </v-col>
+                    <v-btn type="submit" block class="mt-2" variant="tonal" color="#884EC3">Ir a la invitacion</v-btn>
+                </v-row>
+            </v-container>
+        </v-form>
+    </v-container>
 
-                <v-col cols="12" md="4">
-                    <v-text-field label="Contraseña" type="password" required></v-text-field>
-                </v-col>
-                <v-btn type="submit" block class="mt-2">Entrar</v-btn>
-            </v-row>
-        </v-container>
-    </v-form>
 </template>
 
 <script setup>
-
+import Paragraph from './Paragraph.vue'
 import { useAuthStore } from "@/stores/AuthStore";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import auth from '../firebase'
@@ -41,8 +45,5 @@ const onSubmit = (e) => {
             const errorMessage = error.message;
             // ..
         });
-
 }
-
-
 </script>
