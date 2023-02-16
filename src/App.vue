@@ -2,23 +2,25 @@
   <v-app>
     <HeaderName />
     <BtnMusic v-show="user.userLogget" />
-    <Login v-if="!user.userLogget" />
-    <v-main v-else>
-      <Count />
-      <Paragraph text="Hay momentos que no se pueden borrar
+    <Suspense>
+      <Login v-if="!user.userLogget" />
+      <v-main v-else>
+        <Count />
+        <Paragraph text="Hay momentos que no se pueden borrar
         personas que no se pueden olvidar
         y recuerdos como éste que siempre
         voy a atesorar...." />
-      <Mis15 />
-      <CardLocation />
-      <CardPhotos />
-      <CardTask />
-      <Confirm />
-      <Gift />
-      <DressCode />
-      <Spotify />
-      <Footer />
-    </v-main>
+        <Mis15 />
+        <CardLocation />
+        <CardPhotos />
+        <CardTask />
+        <Confirm />
+        <Gift />
+        <DressCode />
+        <Spotify />
+        <Footer />
+      </v-main>
+    </Suspense>
   </v-app>
 </template>
 
@@ -41,4 +43,5 @@ import Login from './components/Login.vue';
 import { useAuthStore } from './stores/AuthStore';
 
 const user = useAuthStore();
+
 </script>

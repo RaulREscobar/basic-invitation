@@ -10,7 +10,9 @@
                 <br />
                 <br />
                 <b>
-                    COMFIRMES ASISTENCIA
+                    COMFIRMEN ASISTENCIA 
+                    <br />
+                    Familia: {{ familia }}
                 </b>
             </v-card-text>
             <v-form ref="formConfirm">
@@ -27,12 +29,15 @@
     </v-container>
 </template>
 <script>
+import { useAuthStore } from '../stores/AuthStore'
+
 export default {
     data() {
+        const store = useAuthStore()
         return {
-            invitados: ["invitado 1", "invitado 2", "invitado 3", "invitado 4"]
+            invitados: store.invitadosFamilia[0],
+            familia : store.familia
         }
     }
 }
-
 </script>

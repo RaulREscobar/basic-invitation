@@ -23,21 +23,38 @@
 import Paragraph from './Paragraph.vue'
 import { useAuthStore } from "@/stores/AuthStore";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import auth from '../firebase'
+import { auth, db } from '../firebase'
+import { getDocs, query, collection } from "@firebase/firestore";
+
+
+const docRef = query(collection(db, "famili"));
+const docSnap = await getDocs(docRef);
+
 
 const form = false;
 const store = useAuthStore();
+
 const onSubmit = (e) => {
 
     const email = e.target[0].value + "@mail.com";
-    const password = e.target[1].value
+    const password = e.target[1].value;
+    
 
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
             user.displayName = e.target[0].value;
+            console.log(user.uid)
             store.userLogget = true;
+            store.uidUserLogget = user.uid;
+            // Si coinciden con el uid mando los invitados al store
+            docSnap.forEach(doc => {
+            if(doc.data().uidUser === user.uid){
+                store.familia = doc.data().familia;
+                store.invitadosFamilia.push(doc.data().invitados)
+            }
+           })
             // ...
         })
         .catch((error) => {

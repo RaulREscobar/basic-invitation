@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "firebase": "^9.17.1",
+    "firebase-admin": "^11.5.0",
     "pinia": "^2.0.30",
     "roboto-fontface": "*",
     "vue": "^3.2.38",

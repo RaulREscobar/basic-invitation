@@ -4,6 +4,9 @@ export const useAuthStore = defineStore('AuthStore', {
     state: () => {
         return {
             userLogget: false,
+            uidUserLogget: null,
+            invitadosFamilia: [],
+            familia: null,
         }
     }
 })
