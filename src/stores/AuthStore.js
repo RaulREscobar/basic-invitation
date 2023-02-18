@@ -7,6 +7,7 @@ export const useAuthStore = defineStore('AuthStore', {
             uidUserLogget: null,
             invitadosFamilia: [],
             familia: null,
+            uidFamilia: "",
         }
     }
 })

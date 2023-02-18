@@ -27,8 +27,8 @@ import { auth, db } from '../firebase'
 import { getDocs, query, collection } from "@firebase/firestore";
 
 
-const docRef = query(collection(db, "famili"));
-const docSnap = await getDocs(docRef);
+const familiRef = query(collection(db, "famili"));
+const familias = await getDocs(familiRef);
 
 
 const form = false;
@@ -38,23 +38,23 @@ const onSubmit = (e) => {
 
     const email = e.target[0].value + "@mail.com";
     const password = e.target[1].value;
-    
+
 
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             // Signed in 
             const user = userCredential.user;
             user.displayName = e.target[0].value;
-            console.log(user.uid)
             store.userLogget = true;
             store.uidUserLogget = user.uid;
             // Si coinciden con el uid mando los invitados al store
-            docSnap.forEach(doc => {
-            if(doc.data().uidUser === user.uid){
-                store.familia = doc.data().familia;
-                store.invitadosFamilia.push(doc.data().invitados)
-            }
-           })
+            familias.forEach(familia => {
+                if (familia.data().uidUser === user.uid) {
+                    store.familia = familia.data().familia;
+                    store.invitadosFamilia.push(familia.data().invitados);
+                    store.uidFamilia = familia.id;
+                }
+            })
             // ...
         })
         .catch((error) => {
