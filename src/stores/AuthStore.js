@@ -8,6 +8,9 @@ export const useAuthStore = defineStore('AuthStore', {
             invitadosFamilia: [],
             familia: null,
             uidFamilia: "",
+            loadingDrink: false,
+            loadingConfirm: false,
+            loadingLogin: false,
         }
     }
 })

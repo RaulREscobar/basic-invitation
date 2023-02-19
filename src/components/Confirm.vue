@@ -20,7 +20,7 @@
                     <v-checkbox :value="invitado" :label="invitado" color="#884EC3"></v-checkbox>
                 </v-row>
                 <v-card-actions class="d-flex justify-space-around align-center mt-4">
-                    <v-btn type="submit" variant="tonal" color="#884EC3">
+                    <v-btn :loading="store.loadingConfirm" type="submit" variant="tonal" color="#884EC3">
                         Confirmar
                     </v-btn>
                 </v-card-actions>
@@ -30,29 +30,43 @@
 </template>
 <script setup>
 import { useAuthStore } from '../stores/AuthStore'
-import { query, doc, setDoc, getDocs, collection, updateDoc } from "firebase/firestore";
+import { doc, updateDoc } from "firebase/firestore";
 import { db } from '../firebase'
 
-//store
+//inicializamos store y obtenemos el uid de la familia
 const store = useAuthStore();
 const uidFamilia = store.uidFamilia;
-//
-const invitadosConfirmados = [];
-// 
-const familiRef = doc(db, "famili", uidFamilia);
-console.log(familiRef)
 
-const confirm = (e) => {
-    for (let index = 0; index < e.target.length - 1; index++) {
-        const invitado = e.target[index];
-        invitado.checked ? invitadosConfirmados.push(invitado.value) : "";
+//inicialisamos variables
+const invitados = store.invitadosFamilia[0];
+const familia = store.familia;
+const invitadosConfirmados = [];
+
+
+//obtenemos los datos de la familia logueada. 
+const familiRef = doc(db, "famili", uidFamilia);
+
+//al confirmar se actualiza la lista de invitados confirmados.
+const confirm = async (e) => {
+
+    try {
+        // Cambiamos la variable de estado para poder ver el loading en el boton.
+        store.loadingConfirm = true;
+        // Recorremos los invitados y los ponemos en una variable
+        for (let index = 0; index < e.target.length - 1; index++) {
+            const invitado = e.target[index];
+            invitado.checked ? invitadosConfirmados.push(invitado.value) : "";
+        }
+        // Actualizamos la db con la variable creada con los invitados confirmados.
+        await updateDoc(familiRef, {
+            confirm: [...new Set(invitadosConfirmados)]
+        })
+        // Reseteamos la  variable de estado para no mostrar el spinner.
+        store.loadingConfirm = false;
+    } catch (err) {
+        console.log(err)
     }
-    updateDoc(familiRef, {
-        confirm: [...new Set(invitadosConfirmados)]
-    })
 }
-const invitados = store.invitadosFamilia[0]
-const familia = store.familia
 
 
 </script>

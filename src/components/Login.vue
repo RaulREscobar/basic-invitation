@@ -11,7 +11,8 @@
                     <v-col cols="12" md="4">
                         <v-text-field color="#884EC3" label="Contraseña" type="password" required></v-text-field>
                     </v-col>
-                    <v-btn type="submit" block class="mt-2" variant="tonal" color="#884EC3">Ir a la invitacion</v-btn>
+                    <v-btn :loading="store.loadingLogin" type="submit" block class="mt-2" variant="tonal"
+                        color="#884EC3">Ir a la invitacion</v-btn>
                 </v-row>
             </v-container>
         </v-form>
@@ -35,10 +36,11 @@ const form = false;
 const store = useAuthStore();
 
 const onSubmit = (e) => {
-
     const email = e.target[0].value + "@mail.com";
     const password = e.target[1].value;
 
+    // Cambiamos la variable de estado para poder ver el loading en el boton.
+    store.loadingLogin = true;
 
     signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
@@ -55,7 +57,9 @@ const onSubmit = (e) => {
                     store.uidFamilia = familia.id;
                 }
             })
-            // ...
+            // Reseteamos la  variable de estado para no mostrar el spinner.
+            store.loadingLogin = false;
+
         })
         .catch((error) => {
             const errorCode = error.code;

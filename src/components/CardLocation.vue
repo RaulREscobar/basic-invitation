@@ -10,10 +10,12 @@
                 <br />
                 Desde las 21hs
             </v-card-text>
-            <v-img src="https://cdn.pixabay.com/photo/2020/07/12/07/47/bee-5396362_1280.jpg" height="150">
-            </v-img>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3291.7080640081513!2d-58.88156318495332!3d-34.408765480510446!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bc9d79e61fa725%3A0x40b7735371bcc05e!2sRoberto%20Koch%202370%2C%20B1631AMD%20Villa%20Rosa%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1676772984149!5m2!1ses-419!2sar"
+                width="80%" height="100%" style="border:0;" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             <v-card-actions class="d-flex justify-space-around align-center mt-4">
-                <v-btn variant="tonal" color="#884EC3">
+                <v-btn href="https://goo.gl/maps/ZVXyK8WSi3S8f1Sb6" variant="tonal" color="#884EC3">
                     ¿Como llegar?
                 </v-btn>
             </v-card-actions>

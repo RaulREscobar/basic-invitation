@@ -2,13 +2,12 @@
     <v-btn icon="mdi-play-circle-outline" v-if="isPlaying" @click="play()" variant="tonal" color="#884EC3"
         position="fixed">
     </v-btn>
-    <v-btn v-else icon="mdi-pause-circle-outline" @click="pause()" variant="tonal" color="#884EC3"
-        position="fixed">
+    <v-btn v-else icon="mdi-pause-circle-outline" @click="pause()" variant="tonal" color="#884EC3" position="fixed">
     </v-btn>
 </template>
 
 <script setup>
-import song from '../assets/yanovuelvas.mp3'
+import song from '../assets/JVKE-goldenhour.mp3'
 import { ref } from 'vue';
 
 const player = ref(new Audio(song));
@@ -16,6 +15,7 @@ const isPlaying = ref(true);
 
 let play = () => {
     player.value.play();
+    player.volume = 0.1;
     isPlaying.value = false;
 }
 
