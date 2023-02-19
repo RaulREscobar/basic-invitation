@@ -12,7 +12,9 @@
                 Decinos cual es el tuyo
             </v-card-text>
             <v-card-actions class="d-flex justify-space-around align-center mt-4">
-                <v-btn variant="tonal" color="#884EC3">
+                <v-btn target="_blank"
+                    href="https://open.spotify.com/playlist/3Eq1RQKZQFU9StMteVu8xT?si=460f1050a5e740e5" variant="tonal"
+                    color="#884EC3">
                     Ir a playlist
                 </v-btn>
             </v-card-actions>

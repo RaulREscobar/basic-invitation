@@ -15,7 +15,7 @@
                 width="80%" height="100%" style="border:0;" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
             <v-card-actions class="d-flex justify-space-around align-center mt-4">
-                <v-btn href="https://goo.gl/maps/ZVXyK8WSi3S8f1Sb6" variant="tonal" color="#884EC3">
+                <v-btn target="_blank" href="https://goo.gl/maps/ZVXyK8WSi3S8f1Sb6" variant="tonal" color="#884EC3">
                     ¿Como llegar?
                 </v-btn>
             </v-card-actions>

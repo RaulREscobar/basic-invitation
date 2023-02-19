@@ -9,10 +9,12 @@
                 Sabemos lo complicado que puede ser buscar el obsequio ideal.
             </v-card-text>
             <v-card-text>
-                Por eso una buena alternativa es dejar que la quinceañera lo decida, para ello te dejamos un link para que le deposites lo que quieras!!!
+                Por eso una buena alternativa es dejar que la quinceañera lo decida, para ello te dejamos un link para
+                que le deposites lo que quieras!!!
             </v-card-text>
             <v-card-actions class="d-flex justify-space-around align-center mt-4">
-                <v-btn variant="tonal" color="#884EC3">
+                <v-btn target="_blank" href="https://link.mercadopago.com.ar/raulescobar" variant="tonal"
+                    color="#884EC3">
                     Regalar
                 </v-btn>
             </v-card-actions>
