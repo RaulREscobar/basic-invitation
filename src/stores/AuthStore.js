@@ -11,6 +11,8 @@ export const useAuthStore = defineStore('AuthStore', {
             loadingDrink: false,
             loadingConfirm: false,
             loadingLogin: false,
+            overlayConfirm: false,
+            overlayDrink: false,
         }
     }
 })

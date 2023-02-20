@@ -24,6 +24,9 @@
                         Confirmar
                     </v-btn>
                 </v-card-actions>
+                <v-overlay v-model="store.overlayConfirm" contained class="align-center justify-center">
+                    <v-btn append-icon="mdi-check" color="#884EC3">confirmados</v-btn>
+                </v-overlay>
             </v-form>
         </v-card>
     </v-container>
@@ -52,6 +55,8 @@ const confirm = async (e) => {
     try {
         // Cambiamos la variable de estado para poder ver el loading en el boton.
         store.loadingConfirm = true;
+
+        store.overlayConfirm = false;
         // Recorremos los invitados y los ponemos en una variable
         for (let index = 0; index < e.target.length - 1; index++) {
             const invitado = e.target[index];
@@ -63,6 +68,10 @@ const confirm = async (e) => {
         })
         // Reseteamos la  variable de estado para no mostrar el spinner.
         store.loadingConfirm = false;
+
+        store.overlayConfirm = true;
+        setTimeout(() => { store.overlayConfirm = false }, 1500)
+
     } catch (err) {
         console.log(err)
     }

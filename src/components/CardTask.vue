@@ -18,6 +18,9 @@
                         Enviar
                     </v-btn>
                 </v-card-actions>
+                <v-overlay v-model="store.overlayDrink" contained class="align-center justify-center">
+                    <v-btn append-icon="mdi-check" color="#884EC3">Guardado</v-btn>
+                </v-overlay>
             </v-form>
         </v-card>
     </v-container>
@@ -51,6 +54,7 @@ async function confirmDrinks(e) {
     try {
         // Cambiamos la variable de estado para poder ver el loading en el boton.
         store.loadingDrink = true;
+        store.overlayDrink = false;
         for (let index = 0; index < e.target.length - 1; index++) {
             const drink = e.target[index];
 
@@ -61,6 +65,8 @@ async function confirmDrinks(e) {
         })
         //una vez que termina de modificar la db reseteamos la variable de estado.
         store.loadingDrink = false;
+        store.overlayDrink = true;
+        setTimeout(() => { store.overlayDrink = false }, 1500)
     } catch (err) {
         console.error(err)
     }
