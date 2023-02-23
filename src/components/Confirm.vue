@@ -3,7 +3,7 @@
         <v-card class="text-center pa-4">
             <v-icon color="#884EC3" icon="mdi-checkbox-multiple-outline" size="70" type="outline"></v-icon>
             <v-card-title class="text-center">
-                CONFIRMAR ASISTENCIAS...
+                ASISTENCIAS
             </v-card-title>
             <v-card-text class="mb-4">
                 Estamos preparando todo para que la pasemos fabuloso y para ello necesitamos que :
@@ -13,7 +13,11 @@
                     COMFIRMEN ASISTENCIA
                     <br />
                     Familia: {{ familia }}
+                    <br />
                 </b>
+                <p>
+                    <b>*puedes elegir más de una opción</b>
+                </p>
             </v-card-text>
             <v-form ref="formConfirm" @submit.prevent="confirm">
                 <v-row class="mx-auto" justify="center" v-for="invitado in invitados" :key="invitado">
@@ -28,6 +32,9 @@
                     <v-btn append-icon="mdi-check" color="#884EC3">confirmados</v-btn>
                 </v-overlay>
             </v-form>
+            <p>
+                <b>*pulsa en confirmar luego de seleccionar</b>
+            </p>
         </v-card>
     </v-container>
 </template>

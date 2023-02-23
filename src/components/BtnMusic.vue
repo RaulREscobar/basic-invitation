@@ -1,8 +1,9 @@
-<template>
-    <v-btn icon="mdi-play-circle-outline" v-if="isPlaying" @click="play()" variant="tonal" color="#884EC3"
+<template >
+    <v-btn class="ind9999" icon="mdi-play-circle-outline" v-if="isPlaying" @click="play()" variant="tonal" color="#884EC3"
         position="fixed">
     </v-btn>
-    <v-btn v-else icon="mdi-pause-circle-outline" @click="pause()" variant="tonal" color="#884EC3" position="fixed">
+    <v-btn v-else class="ind9999" icon="mdi-pause-circle-outline" @click="pause()" variant="tonal" color="#884EC3"
+        position="fixed">
     </v-btn>
 </template>
 
@@ -24,3 +25,8 @@ let pause = () => {
     isPlaying.value = true;
 }
 </script>
+<style>
+.ind9999 {
+    z-index: 99999;
+}
+</style>

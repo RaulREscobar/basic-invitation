@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app class="font">
     <HeaderName />
     <BtnMusic v-show="user.userLogget" />
     <Suspense>
@@ -7,9 +7,9 @@
       <v-main v-else>
         <Count />
         <Paragraph text="Hay momentos que no se pueden borrar
-        personas que no se pueden olvidar
-        y recuerdos como éste que siempre
-        voy a atesorar...." />
+          personas que no se pueden olvidar
+          y recuerdos como éste que siempre
+          voy a atesorar...." />
         <Mis15 />
         <CardLocation />
         <CardPhotos />
@@ -45,3 +45,15 @@ import { useAuthStore } from './stores/AuthStore';
 const user = useAuthStore();
 
 </script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Josefin+Sans:wght@300&display=swap');
+
+.font {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.font-title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 60px;
+}
+</style>

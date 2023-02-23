@@ -3,13 +3,17 @@
         <v-card class="text-center pa-3" color="#EEDAF9">
             <v-icon color="#884EC3" icon="mdi-clipboard-text" size="70" type="outline"></v-icon>
             <v-card-title class="text-center">
-                NOS GUSTARIA SABER MÁS...
+                ¿QUE TOMAS?
             </v-card-title>
 
             <v-form @submit.prevent="confirmDrinks">
                 <v-card-text>
                     ¿Que bebida te gustaria tomar?
+                    <p>
+                        <b>*puedes elegir más de una opción</b>
+                    </p>
                 </v-card-text>
+
                 <v-row v-for="drink in drinks" justify="center" class="mx-auto">
                     <v-checkbox :value='drink' :label="drink"></v-checkbox>
                 </v-row>
@@ -22,6 +26,9 @@
                     <v-btn append-icon="mdi-check" color="#884EC3">Guardado</v-btn>
                 </v-overlay>
             </v-form>
+            <p>
+                <b>*pulsa en enviar luego de seleccionar</b>
+            </p>
         </v-card>
     </v-container>
 </template>
