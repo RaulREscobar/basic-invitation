@@ -7,9 +7,9 @@
       <v-main v-else>
         <Count />
         <Paragraph text="Hay momentos que no se pueden borrar
-          personas que no se pueden olvidar
-          y recuerdos como éste que siempre
-          voy a atesorar...." />
+              personas que no se pueden olvidar
+              y recuerdos como éste que siempre
+              voy a atesorar...." />
         <Mis15 />
         <CardLocation />
         <CardPhotos />
@@ -42,8 +42,8 @@ import Login from './components/Login.vue';
 //Stores
 import { useAuthStore } from './stores/AuthStore';
 
-const user = useAuthStore();
 
+const user = useAuthStore();
 </script>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Josefin+Sans:wght@300&display=swap');

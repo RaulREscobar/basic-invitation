@@ -48,7 +48,7 @@ const store = useAuthStore();
 const uidFamilia = store.uidFamilia;
 
 //inicialisamos variables
-const invitados = store.invitadosFamilia[0];
+const invitados = store.invitadosFamilia;
 const familia = store.familia;
 const invitadosConfirmados = [];
 

@@ -1,7 +1,7 @@
 <template>
     <v-container class="">
         <Paragraph text="Hola!!! esta es mi invitacion a mis 15
-        pero antes debes ingresar tu nombre y contraseña que te mandamos por privado." />
+            pero antes debes ingresar tu nombre y contraseña que te mandamos por privado." />
         <v-form v-model="form" @submit.prevent="onSubmit">
             <v-container class="">
                 <v-row>
@@ -11,13 +11,12 @@
                     <v-col cols="12" md="4">
                         <v-text-field color="#884EC3" label="Contraseña" type="password" required></v-text-field>
                     </v-col>
-                    <v-btn :loading="store.loadingLogin" type="submit" block class="mt-2" variant="tonal"
-                        color="#884EC3">Ir a la invitacion</v-btn>
+                    <v-btn :loading="store.loadingLogin" type="submit" block class="mt-2" variant="tonal" color="#884EC3">Ir
+                        a la invitacion</v-btn>
                 </v-row>
             </v-container>
         </v-form>
     </v-container>
-
 </template>
 
 <script setup>
@@ -52,9 +51,18 @@ const onSubmit = (e) => {
             // Si coinciden con el uid mando los invitados al store
             familias.forEach(familia => {
                 if (familia.data().uidUser === user.uid) {
-                    store.familia = familia.data().familia;
-                    store.invitadosFamilia.push(familia.data().invitados);
-                    store.uidFamilia = familia.id;
+                    /*  store.familia = familia.data().familia;
+                     store.invitadosFamilia.push(familia.data().invitados);
+                     store.uidFamilia = familia.id; */
+                    const userSession = {
+                        uidUserLogget: user.uid,
+                        userLogget: true,
+                        familia: familia.data().familia,
+                        uidFamilia: familia.id,
+                        invitadosFamilia: familia.data().invitados
+                    }
+
+                    localStorage.setItem("user", JSON.stringify(userSession))
                 }
             })
             // Reseteamos la  variable de estado para no mostrar el spinner.

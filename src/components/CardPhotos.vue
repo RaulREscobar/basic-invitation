@@ -7,9 +7,7 @@
             </v-card-title>
             <v-row justify="center">
                 <v-col v-for="n in 3" :key="n" class="d-flex child-flex" cols="10">
-                    <v-img :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-                        :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`" aspect-ratio="1" cover
-                        class="bg-grey-lighten-2">
+                    <v-img src="@/assets/daf2.jpeg" class="bg-grey-lighten-2">
                         <template v-slot:placeholder>
                             <v-row align-content="center" class="fill-height ma-0" justify="center">
                                 <v-progress-circular indeterminate color="grey-lighten-5"></v-progress-circular>
@@ -21,3 +19,6 @@
         </v-card>
     </v-container>
 </template>
+<script setup>
+const photos = ["daf1", "daf2", "daf3"]
+</script>
