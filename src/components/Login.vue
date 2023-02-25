@@ -1,7 +1,7 @@
 <template>
     <v-container class="">
         <Paragraph text="Hola!!! Esta es mi invitación a mis 15
-     pero antes debes ingresar tu nombre y contraseña que te mandamos por privado." />
+             pero antes debes ingresar tu nombre y contraseña que te mandamos por privado." />
         <v-form v-model="form" @submit.prevent="onSubmit">
             <v-container class="">
                 <v-row>
@@ -52,9 +52,6 @@ const onSubmit = (e) => {
             // Si coinciden con el uid mando los invitados al store
             familias.forEach(familia => {
                 if (familia.data().uidUser === user.uid) {
-                    /*  store.familia = familia.data().familia;
-                     store.invitadosFamilia.push(familia.data().invitados);
-                     store.uidFamilia = familia.id; */
                     const userSession = {
                         uidUserLogget: user.uid,
                         userLogget: true,

@@ -39,21 +39,22 @@
     </v-container>
 </template>
 <script setup>
-import { useAuthStore } from '../stores/AuthStore'
+import { useAuthStore } from '../stores/AuthStore';
 import { doc, updateDoc } from "firebase/firestore";
-import { db } from '../firebase'
+import { db } from '../firebase';
 
 //inicializamos store y obtenemos el uid de la familia
+const userLogget = JSON.parse(localStorage.getItem("user"));
 const store = useAuthStore();
-const uidFamilia = store.uidFamilia;
+const uidFamilia = userLogget.uidFamilia;
 
 //inicialisamos variables
-const invitados = store.invitadosFamilia;
-const familia = store.familia;
+const invitados = userLogget.invitadosFamilia;
+const familia = userLogget.familia;
 const invitadosConfirmados = [];
 
 
-//obtenemos los datos de la familia logueada. 
+//obtenemos los datos de la  familia logueada. 
 const familiRef = doc(db, "famili", uidFamilia);
 
 //al confirmar se actualiza la lista de invitados confirmados.

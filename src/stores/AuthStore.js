@@ -1,4 +1,4 @@
-import { defineStore } from 'pinia'
+import { defineStore } from 'pinia';
 
 const userParse = JSON.parse(localStorage.getItem("user"));
 

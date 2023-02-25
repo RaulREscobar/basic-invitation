@@ -39,8 +39,9 @@ import { getDocs, query, collection, doc, updateDoc } from "@firebase/firestore"
 import { useAuthStore } from '../stores/AuthStore';
 
 //inicializamos el store y obtenemos el uid de la familia
+const userLogget = JSON.parse(localStorage.getItem("user"));
 const store = useAuthStore();
-const uidFamilia = store.uidFamilia;
+const uidFamilia = userLogget.uidFamilia;
 
 //inicializamos variables
 const drinks = [];
