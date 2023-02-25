@@ -1,22 +1,22 @@
 <template>
     <v-container>
-        <v-card class="text-center pa-4">
+        <v-card class="text-center pa-4" color="#EEDAF9">
             <v-icon color="#884EC3" icon="mdi-checkbox-multiple-outline" size="70" type="outline"></v-icon>
             <v-card-title class="text-center">
-                ASISTENCIAS
+                ¿VENIS?
             </v-card-title>
             <v-card-text class="mb-4">
-                Estamos preparando todo para que la pasemos fabuloso y para ello necesitamos que :
+                No solo es importante la noche de mis 15 años, sino también el hecho de poder compartirla junto a ustedes
                 <br />
                 <br />
                 <b>
-                    COMFIRMEN ASISTENCIA
+                    CONFIRMEN ASISTENCIA
                     <br />
                     Familia: {{ familia }}
                     <br />
                 </b>
                 <p>
-                    <b>*puedes elegir más de una opción</b>
+                    <b>*Puedes elegir más de una opción</b>
                 </p>
             </v-card-text>
             <v-form ref="formConfirm" @submit.prevent="confirm">
@@ -33,7 +33,7 @@
                 </v-overlay>
             </v-form>
             <p>
-                <b>*pulsa en confirmar luego de seleccionar</b>
+                <b>*Pulsa en confirmar luego de seleccionar</b>
             </p>
         </v-card>
     </v-container>

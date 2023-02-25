@@ -1,7 +1,7 @@
 <template>
     <v-container class="">
-        <Paragraph text="Hola!!! esta es mi invitacion a mis 15
-            pero antes debes ingresar tu nombre y contraseña que te mandamos por privado." />
+        <Paragraph text="Hola!!! Esta es mi invitación a mis 15
+     pero antes debes ingresar tu nombre y contraseña que te mandamos por privado." />
         <v-form v-model="form" @submit.prevent="onSubmit">
             <v-container class="">
                 <v-row>
@@ -11,8 +11,9 @@
                     <v-col cols="12" md="4">
                         <v-text-field color="#884EC3" label="Contraseña" type="password" required></v-text-field>
                     </v-col>
-                    <v-btn :loading="store.loadingLogin" type="submit" block class="mt-2" variant="tonal" color="#884EC3">Ir
-                        a la invitacion</v-btn>
+                    <v-btn :loading="store.loadingLogin" type="submit" block class="mt-2" variant="tonal" color="#884EC3">
+                        Ir a la invitacion
+                    </v-btn>
                 </v-row>
             </v-container>
         </v-form>

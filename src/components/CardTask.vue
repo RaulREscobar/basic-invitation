@@ -1,16 +1,16 @@
 <template>
     <v-container>
-        <v-card class="text-center pa-3" color="#EEDAF9">
+        <v-card class="text-center pa-3">
             <v-icon color="#884EC3" icon="mdi-clipboard-text" size="70" type="outline"></v-icon>
             <v-card-title class="text-center">
-                ¿QUE TOMAS?
+                ¿QUÉ TOMAS?
             </v-card-title>
 
             <v-form @submit.prevent="confirmDrinks">
                 <v-card-text>
-                    ¿Que bebida te gustaria tomar?
+                    ¿Qué bebida te gustaría tomar?
                     <p>
-                        <b>*puedes elegir más de una opción</b>
+                        <b>*Puedes elegir más de una opción</b>
                     </p>
                 </v-card-text>
 
@@ -27,7 +27,7 @@
                 </v-overlay>
             </v-form>
             <p>
-                <b>*pulsa en enviar luego de seleccionar</b>
+                <b>*Pulsa enviar luego de seleccionar</b>
             </p>
         </v-card>
     </v-container>
