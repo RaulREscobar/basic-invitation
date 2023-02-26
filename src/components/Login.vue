@@ -1,7 +1,7 @@
 <template>
     <v-container class="">
         <Paragraph text="Hola!!! Esta es mi invitación a mis 15
-             pero antes debes ingresar tu nombre y contraseña que te mandamos por privado." />
+                 pero antes debes ingresar tu nombre y contraseña que te mandamos por privado." />
         <v-form v-model="form" @submit.prevent="onSubmit">
             <v-container class="">
                 <v-row>
@@ -17,6 +17,7 @@
                 </v-row>
             </v-container>
         </v-form>
+        <v-alert v-show="store.errorLogin" type="error" variant="tonal" class="mt-2" text="Verifica usuario y contraseña"></v-alert>
     </v-container>
 </template>
 
@@ -26,7 +27,6 @@ import { useAuthStore } from "@/stores/AuthStore";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from '../firebase'
 import { getDocs, query, collection } from "@firebase/firestore";
-
 
 const familiRef = query(collection(db, "famili"));
 const familias = await getDocs(familiRef);
@@ -70,6 +70,8 @@ const onSubmit = (e) => {
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
+            store.loadingLogin = false;
+            store.errorLogin = true;
             // ..
         });
 }
