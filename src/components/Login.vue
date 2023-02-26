@@ -1,7 +1,7 @@
 <template>
     <v-container class="">
         <Paragraph text="Hola!!! Esta es mi invitación a mis 15
-                 pero antes debes ingresar tu nombre y contraseña que te mandamos por privado." />
+                         pero antes debes ingresar tu nombre y contraseña que te mandamos por privado." />
         <v-form v-model="form" @submit.prevent="onSubmit">
             <v-container class="">
                 <v-row>
@@ -17,11 +17,13 @@
                 </v-row>
             </v-container>
         </v-form>
-        <v-alert v-show="store.errorLogin" type="error" variant="tonal" class="mt-2" text="Verifica usuario y contraseña"></v-alert>
+        <v-alert v-show="store.errorLogin" type="error" variant="tonal" class="mt-2"
+            text="Verifica usuario y contraseña"></v-alert>
     </v-container>
 </template>
 
 <script setup>
+import { onMounted } from 'vue';
 import Paragraph from './Paragraph.vue'
 import { useAuthStore } from "@/stores/AuthStore";
 import { signInWithEmailAndPassword } from "firebase/auth";
@@ -31,9 +33,12 @@ import { getDocs, query, collection } from "@firebase/firestore";
 const familiRef = query(collection(db, "famili"));
 const familias = await getDocs(familiRef);
 
-
 const form = false;
 const store = useAuthStore();
+
+onMounted(() => {
+    store.loading = false;
+})
 
 const onSubmit = (e) => {
     const email = e.target[0].value + "@mail.com";
@@ -75,4 +80,5 @@ const onSubmit = (e) => {
             // ..
         });
 }
+
 </script>
