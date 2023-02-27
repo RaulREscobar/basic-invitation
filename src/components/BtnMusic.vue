@@ -8,15 +8,20 @@
 </template>
 
 <script setup>
+import { onActivated } from 'vue';
 import song from '../assets/JVKE-goldenhour.mp3'
 import { ref } from 'vue';
 
 const player = ref(new Audio(song));
-const isPlaying = ref(true);
+const isPlaying = ref(false);
+
+onActivated(() => {
+    player.value.volume = 0.1;
+    player.value.autoplay = true;
+})
 
 let play = () => {
     player.value.play();
-    player.volume = 0.1;
     isPlaying.value = false;
 }
 
