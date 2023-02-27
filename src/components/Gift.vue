@@ -9,14 +9,17 @@
                 Sabemos lo complicado que puede ser buscar el obsequio ideal.
             </v-card-text>
             <v-card-text>
-                Por eso, una buena alternativa es permitir que la quinceañera elija su regalo. Te proporcionamos un enlace donde puedes depositar la cantidad que desees!!!
+                Por eso, una buena alternativa es permitir que la quinceañera elija su regalo. Te proporcionamos un enlace
+                donde puedes depositar la cantidad que desees!!!
             </v-card-text>
-            <v-card-actions class="d-flex justify-space-around align-center mt-4">
-                <v-btn target="_blank" href="https://link.mercadopago.com.ar/raulescobar" variant="tonal"
-                    color="#884EC3">
-                    Regalar
-                </v-btn>
-            </v-card-actions>
+            <div class="d-flex justify-space-around align-center mt-4">
+                <Dialog :dialog="dialog" />
+            </div>
         </v-card>
     </v-container>
 </template>
+<script setup>
+import Dialog from './Dialog.vue';
+
+const dialog = false;
+</script>

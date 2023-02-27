@@ -2,15 +2,15 @@
   <v-app class="font">
     <HeaderName />
     <BtnMusic v-show="user.userLogget" />
-    <Loading v-if="user.loading" />
+    <Loading v-if="user.loading || !user.userLogget" />
     <Suspense>
       <Login v-if="!user.userLogget" />
       <v-main v-else>
         <Count />
         <Paragraph text="Hay momentos que no se pueden borrar
-                    personas que no se pueden olvidar
-                    y recuerdos como éste que siempre
-                    voy a atesorar...." />
+                      personas que no se pueden olvidar
+                      y recuerdos como éste que siempre
+                      voy a atesorar...." />
         <Mis15 />
         <CardLocation />
         <CardTask />
