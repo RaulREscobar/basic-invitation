@@ -2,6 +2,9 @@
   <v-app class="font">
     <HeaderName />
     <KeepAlive>
+      <BtnLogout />
+    </KeepAlive>
+    <KeepAlive>
       <BtnMusic v-if="user.userLogget" />
     </KeepAlive>
     <Loading v-if="user.loading" />
@@ -11,9 +14,9 @@
       <v-main v-else>
         <Count />
         <Paragraph text="Hay momentos que no se pueden borrar
-                        personas que no se pueden olvidar
-                        y recuerdos como éste que siempre
-                        voy a atesorar...." />
+                          personas que no se pueden olvidar
+                          y recuerdos como éste que siempre
+                          voy a atesorar...." />
         <Mis15 />
         <CardLocation />
         <CardTask />
@@ -44,6 +47,7 @@ import Login from './components/Login.vue';
 //Stores
 import { useAuthStore } from './stores/AuthStore';
 import Loading from './components/Loading.vue';
+import BtnLogout from './components/BtnLogout.vue';
 const user = useAuthStore();
 </script>
 <style>

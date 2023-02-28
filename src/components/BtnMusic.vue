@@ -30,7 +30,7 @@ let pause = () => {
     isPlaying.value = true;
 }
 </script>
-<style>
+<style scoped>
 .ind9999 {
     z-index: 99999;
 }
