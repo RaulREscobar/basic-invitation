@@ -16,7 +16,7 @@ const player = ref(new Audio(song));
 const isPlaying = ref(false);
 
 onActivated(() => {
-    player.value.volume = 0.1;
+    player.value.volume = 0.3;
     player.value.autoplay = true;
 })
 
