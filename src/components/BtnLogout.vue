@@ -1,6 +1,6 @@
 <template >
     <v-btn class="ind9999" v-if="user.userLogget" @click="logout" variant="tonal" color="#884EC3" position="fixed">
-        salir
+        <b>salir</b>
     </v-btn>
 </template>
 
