@@ -1,17 +1,28 @@
 <template>
     <v-container class="">
-        <Paragraph text="Hola!!! Esta es mi invitación a mis 15
+        <div class="d-flex flex-column">
+            <h1 class="font-title mb-2">
+                Lázaro 
+            </h1>
+            <h1 class="font-title mb-3">
+                y
+            </h1>
+            <h1 class="font-title">
+                Betiana
+            </h1>
+        </div>
+        <Paragraph text="Hola!!! Esta es mi invitación a nuestra boda
                          pero antes debes ingresar tu nombre y contraseña que te mandamos por privado." />
         <v-form v-model="form" @submit.prevent="onSubmit">
             <v-container class="">
                 <v-row>
                     <v-col cols="12" md="4">
-                        <v-text-field color="#884EC3" label="Nombre" type="email" required></v-text-field>
+                        <v-text-field color="#D2BD80" label="Nombre" type="email" required></v-text-field>
                     </v-col>
                     <v-col cols="12" md="4">
-                        <v-text-field color="#884EC3" label="Contraseña" type="password" required></v-text-field>
+                        <v-text-field color="#D2BD80" label="Contraseña" type="password" required></v-text-field>
                     </v-col>
-                    <v-btn :loading="store.loadingLogin" type="submit" block class="mt-2" variant="tonal" color="#884EC3">
+                    <v-btn :loading="store.loadingLogin" type="submit" block class="mt-2" variant="tonal" color="#D2BD80">
                         Ir a la invitacion
                     </v-btn>
                 </v-row>

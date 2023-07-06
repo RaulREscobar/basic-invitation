@@ -1,38 +1,36 @@
 <template>
     <v-container>
-        <v-card class="text-center pa-4" color="#EEDAF9">
-            <v-icon color="#884EC3" icon="mdi-checkbox-multiple-outline" size="70" type="outline"></v-icon>
-            <v-card-title class="text-center">
+        <v-card class="text-center pa-4">
+            <v-icon color="#D2BD80" icon="mdi-checkbox-multiple-outline" size="70" type="outline"></v-icon>
+            <v-card-title class="font">
                 ¿VENIS?
             </v-card-title>
-            <v-card-text class="mb-4">
-                No solo es importante la noche de mis 15 años, sino también el hecho de poder compartirla junto a ustedes
-                <br />
-                <br />
+            <v-card-text class="mb-4 font">
                 <b>
                     CONFIRMEN ASISTENCIA
                     <br />
+                    <br/>
                     Familia: {{ familia }}
                     <br />
                 </b>
-                <p>
+                <p class="text-caption">
                     <b>*Puedes elegir más de una opción</b>
                 </p>
             </v-card-text>
             <v-form ref="formConfirm" @submit.prevent="confirm">
-                <v-row class="mx-auto" justify="center" v-for="invitado in invitados" :key="invitado">
-                    <v-checkbox :value="invitado" :label="invitado" color="#884EC3"></v-checkbox>
+                <v-row class="mx-auto font" justify="center" v-for="invitado in invitados" :key="invitado">
+                    <v-checkbox :value="invitado" :label="invitado" color="#D2BD80"></v-checkbox>
                 </v-row>
                 <v-card-actions class="d-flex justify-space-around align-center mt-4">
-                    <v-btn :loading="store.loadingConfirm" type="submit" variant="tonal" color="#884EC3">
+                    <v-btn :loading="store.loadingConfirm" type="submit" variant="tonal" color="#D2BD80">
                         Confirmar
                     </v-btn>
                 </v-card-actions>
                 <v-overlay v-model="store.overlayConfirm" contained class="align-center justify-center">
-                    <v-btn append-icon="mdi-check" color="#884EC3">confirmados</v-btn>
+                    <v-btn append-icon="mdi-check" color="#D2BD80">confirmados</v-btn>
                 </v-overlay>
             </v-form>
-            <p>
+            <p class="text-caption font">
                 <b>*Pulsa en confirmar luego de seleccionar</b>
             </p>
         </v-card>

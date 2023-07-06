@@ -1,15 +1,15 @@
 <template>
     <v-container>
         <v-card class="text-center pa-3">
-            <v-icon color="#884EC3" icon="mdi-gift-outline" size="70" type="outline"></v-icon>
-            <v-card-title class="text-center">
+            <v-icon color="#D2BD80" icon="mdi-gift-outline" size="70" type="outline"></v-icon>
+            <v-card-title class="text-center font">
                 OBSEQUIOS
             </v-card-title>
-            <v-card-text>
+            <v-card-text class="font">
                 Sabemos lo complicado que puede ser buscar el obsequio ideal.
             </v-card-text>
-            <v-card-text>
-                Por eso, una buena alternativa es permitir que la quinceañera elija su regalo. Te proporcionamos un enlace
+            <v-card-text class="font">
+                Por eso, una buena alternativa es permitir que los novios elijan su regalo. Te proporcionamos un enlace
                 donde puedes depositar la cantidad que desees!!!
             </v-card-text>
             <div class="d-flex justify-space-around align-center mt-4">

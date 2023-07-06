@@ -1,6 +1,6 @@
 <template>
     <div class="text-center">
-        <v-btn variant="tonal" color="#884EC3" @click="dialog = true">
+        <v-btn variant="tonal" color="#D2BD80" @click="dialog = true">
             Regalar
         </v-btn>
 
@@ -11,15 +11,15 @@
                     0000003100075320459939
                     <br />
                     <b>Alias:</b>
-                    david.356.pure.mp
+                    lazaro-y-betiana
                     <br />
                     <b>CUIT/CUIL:</b>
-                    20314449356
+                    2035555562
                     <br />
                     <b>Mercado Pago</b>
                 </v-card-text>
                 <v-card-actions>
-                    <v-btn variant="tonal" color="#884EC3" block @click="dialog = false">Cerrar</v-btn>
+                    <v-btn variant="tonal" color="#D2BD80" block @click="dialog = false">Cerrar</v-btn>
                 </v-card-actions>
             </v-card>
         </v-dialog>

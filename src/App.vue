@@ -1,28 +1,25 @@
 <template>
   <v-app class="font">
-    <HeaderName />
     <KeepAlive>
       <BtnLogout />
     </KeepAlive>
     <KeepAlive>
       <BtnMusic v-if="user.userLogget" />
     </KeepAlive>
-    <Loading v-if="user.loading" />
+    <!-- <Loading v-if="user.loading" /> -->
     <Loading v-if="user.loading && !user.userLogget" />
     <Suspense>
       <Login v-if="!user.userLogget" />
       <v-main v-else>
+        <HeaderName />
+        <Paragraph text="La fiesta esta por empezar...." />
+        <Paragraph text="18 de Septiembre 2023" />
         <Count />
-        <Paragraph text="Hay momentos que no se pueden borrar
-                          personas que no se pueden olvidar
-                          y recuerdos como éste que siempre
-                          voy a atesorar...." />
-        <Mis15 />
         <CardLocation />
+        <DressCode />
         <CardTask />
         <Confirm />
         <Gift />
-        <DressCode />
         <Spotify />
         <Footer />
       </v-main>
@@ -51,14 +48,28 @@ import BtnLogout from './components/BtnLogout.vue';
 const user = useAuthStore();
 </script>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Josefin+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Libre+Caslon+Display&display=swap');
 
-.font {
-  font-family: 'Josefin Sans', sans-serif;
+
+.font {  
+  font-family: 'Libre Caslon Display', serif;
+  font-size: 18px;
+  color: #D2BD80;
+  text-align: center;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 
 .font-title {
-  font-family: 'Dancing Script', cursive;
-  font-size: 60px;
+  font-family: 'Imperial Script', cursive;
+  color: #CDA974;
+  text-align: center;
+  text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  margin: 15px, auto;
 }
 </style>

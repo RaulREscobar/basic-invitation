@@ -1,8 +1,8 @@
 <template >
-    <v-btn class="ind9999" icon="mdi-play-circle-outline" v-if="isPlaying" @click="play()" variant="tonal" color="#884EC3"
+    <v-btn class="ind9999" icon="mdi-play-circle-outline" v-if="isPlaying" @click="play()" variant="tonal" color="#D2BD80"
         position="fixed">
     </v-btn>
-    <v-btn v-else class="ind9999" icon="mdi-pause-circle-outline" @click="pause()" variant="tonal" color="#884EC3"
+    <v-btn v-else class="ind9999" icon="mdi-pause-circle-outline" @click="pause()" variant="tonal" color="#D2BD80"
         position="fixed">
     </v-btn>
 </template>
@@ -17,7 +17,7 @@ const isPlaying = ref(false);
 
 onActivated(() => {
     player.value.volume = 0.3;
-    player.value.autoplay = true;
+    //player.value.autoplay = true;
 })
 
 let play = () => {

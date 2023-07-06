@@ -1,6 +1,6 @@
 <template>
-    <v-container class="pt-8">
-        <p class="text-center p-3">
+    <v-container >
+        <p class="font">
             {{ text }}
         </p>
     </v-container>

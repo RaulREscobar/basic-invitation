@@ -1,32 +1,32 @@
 <template>
     <v-container>
         <v-card class="text-center pa-3">
-            <v-icon color="#884EC3" icon="mdi-clipboard-text" size="70" type="outline"></v-icon>
-            <v-card-title class="text-center">
+            <v-icon color="#D2BD80" icon="mdi-clipboard-text" size="70" type="outline"></v-icon>
+            <v-card-title class="font">
                 ¿QUÉ TOMAS?
             </v-card-title>
 
             <v-form @submit.prevent="confirmDrinks">
-                <v-card-text>
+                <v-card-text class="font">
                     ¿Qué bebida te gustaría tomar?
-                    <p>
+                    <p class="font text-caption">
                         <b>*Puedes elegir más de una opción</b>
                     </p>
                 </v-card-text>
 
-                <v-row v-for="drink in drinks" justify="center" class="mx-auto">
+                <v-row v-for="drink in drinks" justify="center" class="mx-auto font">
                     <v-checkbox :value='drink' :label="drink"></v-checkbox>
                 </v-row>
                 <v-card-actions class="d-flex justify-space-around align-center mt-4">
-                    <v-btn :loading="store.loadingDrink" type="submit" variant="tonal" color="#884EC3">
+                    <v-btn :loading="store.loadingDrink" type="submit" variant="tonal" color="#D2BD80">
                         Enviar
                     </v-btn>
                 </v-card-actions>
                 <v-overlay v-model="store.overlayDrink" contained class="align-center justify-center">
-                    <v-btn append-icon="mdi-check" color="#884EC3">Guardado</v-btn>
+                    <v-btn append-icon="mdi-check" color="#D2BD80">Guardado</v-btn>
                 </v-overlay>
             </v-form>
-            <p>
+            <p class=" font text-caption">
                 <b>*Pulsa enviar luego de seleccionar</b>
             </p>
         </v-card>
