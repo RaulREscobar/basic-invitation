@@ -1,8 +1,8 @@
 <template >
-    <v-btn class="ind9999" icon="mdi-play-circle-outline" v-if="isPlaying" @click="play()" variant="tonal" color="#D2BD80"
+    <v-btn class="ind9999 color-dorado" size="small" icon="mdi-play" v-if="isPlaying" @click="play()" variant="flat" color="#0005"
         position="fixed">
     </v-btn>
-    <v-btn v-else class="ind9999" icon="mdi-pause-circle-outline" @click="pause()" variant="tonal" color="#D2BD80"
+    <v-btn v-else class="ind9999 color-dorado" size="small" icon="mdi-pause" @click="pause()" variant="flat" color="#0005"
         position="fixed">
     </v-btn>
 </template>
@@ -33,5 +33,6 @@ let pause = () => {
 <style scoped>
 .ind9999 {
     z-index: 99999;
+    top: 50px;
 }
 </style>

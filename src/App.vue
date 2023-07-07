@@ -3,6 +3,7 @@
     <KeepAlive>
       <BtnLogout />
     </KeepAlive>
+    <BtnMenu v-if="user.userLogget" />
     <KeepAlive>
       <BtnMusic v-if="user.userLogget" />
     </KeepAlive>
@@ -45,6 +46,9 @@ import Login from './components/Login.vue';
 import { useAuthStore } from './stores/AuthStore';
 import Loading from './components/Loading.vue';
 import BtnLogout from './components/BtnLogout.vue';
+import BtnMenu from './components/BtnMenu.vue';
+
+
 const user = useAuthStore();
 </script>
 <style>
@@ -74,5 +78,9 @@ body{
   font-weight: 400;
   line-height: 40px;
   margin: 15px, auto;
+}
+
+.color-dorado {
+    color:#D2BD80 !important;
 }
 </style>

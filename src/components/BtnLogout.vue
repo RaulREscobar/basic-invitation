@@ -1,6 +1,5 @@
 <template >
-    <v-btn class="ind9999" v-if="user.userLogget" @click="logout" variant="tonal" color="#D2BD80" position="fixed">
-        <b>salir</b>
+    <v-btn class="ind9999 color-dorado" icon="mdi-exit-to-app" v-if="user.userLogget" @click="logout" variant="flat" color="#0005" position="fixed">
     </v-btn>
 </template>
 
@@ -21,4 +20,5 @@ const logout = () => {
     z-index: 99999;
     right: 0;
 }
+
 </style>
