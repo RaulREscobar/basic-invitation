@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "VivaLosNovios"
-  }
+    "default": "vivalosnovios",
+    "lazaroybetiana": "vivalosnovios"
+  },
+  "targets": {},
+  "etags": {}
 }

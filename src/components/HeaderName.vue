@@ -21,10 +21,8 @@
     background-image: url(../assets/fondo-invitacion-boda.png);
     background-repeat: no-repeat;
     background-size: contain ;
-    min-height: 98vh;
     max-height: 100vh;
-    height: 100%;
-    width: 100%;
+    height: 100%;   
     max-width: 375px;
     display: flex;
     flex-direction: column;
@@ -36,13 +34,9 @@
 .font {
     text-align: center;
 }
-@media (width < 375px){
+@media (width < 345px){
     .font {
         font-size: 16px;
-    }
-    .bg-flower {
-        background-size: contain;
-        gap: 10vw;
     }
 }
 </style>

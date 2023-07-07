@@ -9,6 +9,7 @@ import { getFirestore } from 'firebase/firestore'
 const firebaseConfig = {
   apiKey: "AIzaSyBqAgox5v00c4B0_wsjkaPnHtOGriAL20A",
   authDomain: "vivalosnovios-47c6a.firebaseapp.com",
+  databaseURL: "https://vivalosnovios-47c6a-default-rtdb.firebaseio.com",
   projectId: "vivalosnovios-47c6a",
   storageBucket: "vivalosnovios-47c6a.appspot.com",
   messagingSenderId: "242735189832",

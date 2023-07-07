@@ -50,6 +50,9 @@ const user = useAuthStore();
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Imperial+Script&family=Libre+Caslon+Display&display=swap');
 
+body{
+  background-color: #121212;
+}
 
 .font {  
   font-family: 'Libre Caslon Display', serif;
