@@ -8,9 +8,7 @@
     </KeepAlive>
     <!-- <Loading v-if="user.loading" /> -->
     <Loading v-if="user.loading && !user.userLogget" />
-    <Suspense>
-      <Login v-if="!user.userLogget" />
-      <v-main v-else>
+      <v-main>
         <HeaderName />
         <Paragraph text="La fiesta esta por empezar...." />
         <Paragraph text="18 de Septiembre 2023" />
@@ -23,7 +21,6 @@
         <Spotify />
         <Footer />
       </v-main>
-    </Suspense>
 </template>
 
 <script setup>

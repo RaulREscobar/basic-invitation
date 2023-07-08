@@ -1,16 +1,29 @@
 <template >
-    <v-btn class="ind9999 color-dorado" icon="mdi-exit-to-app" v-if="user.userLogget" @click="logout" variant="flat" color="#0005" position="fixed">
+    <v-btn class="ind9999 color-dorado" icon="mdi-exit-to-app" v-if="user.userLogget" @click="logout" variant="flat"
+        color="#0005" position="fixed">
     </v-btn>
 </template>
 
 <script setup>
 import { useAuthStore } from '../stores/AuthStore';
+import { getAuth, signOut } from "firebase/auth";
+import { useRoute, useRouter } from 'vue-router'
 
 const user = useAuthStore();
+const router = useRouter();
+const route = useRoute();
+
+const auth = getAuth();
+
+
 
 const logout = () => {
     localStorage.clear()
-    location.reload();
+    signOut(auth).then(() => {
+        router.push({ name: 'login' })
+    }).catch((error) => {
+        console.log('Hubo un error al desloguearte en firebase')
+    });
 }
 
 </script>
@@ -20,5 +33,4 @@ const logout = () => {
     z-index: 99999;
     right: 0;
 }
-
 </style>

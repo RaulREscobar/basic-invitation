@@ -40,12 +40,16 @@ import { useAuthStore } from "@/stores/AuthStore";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth, db } from '../firebase'
 import { getDocs, query, collection } from "@firebase/firestore";
+import { useRoute, useRouter } from 'vue-router'
 
 const familiRef = query(collection(db, "famili"));
 const familias = await getDocs(familiRef);
 
 const form = false;
 const store = useAuthStore();
+
+const router = useRouter();
+const route = useRoute();
 
 onMounted(() => {
     store.loading = false;
@@ -75,13 +79,12 @@ const onSubmit = (e) => {
                         uidFamilia: familia.id,
                         invitadosFamilia: familia.data().invitados
                     }
-
                     localStorage.setItem("user", JSON.stringify(userSession))
                 }
             })
             // Reseteamos la  variable de estado para no mostrar el spinner.
             store.loadingLogin = false;
-
+            router.push({name: 'home'})
         })
         .catch((error) => {
             const errorCode = error.code;
