@@ -9,7 +9,7 @@
 
 <script setup>
 import { onActivated } from 'vue';
-import song from '../assets/JVKE-goldenhour.mp3'
+import song from '../assets/music.mp3'
 import { ref } from 'vue';
 
 const player = ref(new Audio(song));

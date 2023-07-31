@@ -2,23 +2,34 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/HomeView.vue';
 import Invitados from '@/views/InvitadosView.vue'
 import Login from '@/views/LoginView.vue';
-import { getAuth } from 'firebase/auth';
+
+
+const userLogget = JSON.parse(localStorage.getItem("user"));
+const isLogget = userLogget !== null ? userLogget.userLogget : false;
+
 
 const routes = [
     {
-        path:'/',
+        path: '/',
         name: 'home',
         component: Home,
-        meta: { 
+        beforeEnter: (to, from, next) => {
+            if (!isLogget) {
+                next({ name: 'login' })
+            } else {
+                next()
+            }
+        },
+        meta: {
             requireAuth: true,
             rol: null,
-        }
+        },
     },
     {
-        path:'/invitados',
+        path: '/invitados',
         name: 'invitados',
         component: Invitados,
-        meta: { 
+        meta: {
             requireAuth: true,
             rol: 'admin',
         }
@@ -27,27 +38,23 @@ const routes = [
         path: '/login',
         name: 'login',
         component: Login,
-        meta: { 
+        beforeEnter: (to, from, next) => {
+            if (isLogget) {
+                next({ name: 'home' })
+            } else {
+                next()
+            }
+        },
+        meta: {
             requireAuth: false,
             rol: null,
-        }
+        },
     }
 ]
 
 const router = createRouter({
     history: createWebHistory(process.env.BASE_URL),
     routes,
-  })
+})
 
-  router.beforeEach((to, from, next) => {
-    const auth = getAuth().currentUser != null;
-    const needAuth = to.meta.requireAuth;
-
-    if(needAuth && !auth) {
-        next('login')
-    } else {
-        next()
-    }
-  })
-
-  export default router
+export default router

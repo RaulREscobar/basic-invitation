@@ -17,6 +17,7 @@ export const useAuthStore = defineStore('AuthStore', {
             overlayDrink: false,
             errorLogin: false,
             loading: true,
+            rol: userParse === null ? null : userParse.rol,
         }
     }
 })

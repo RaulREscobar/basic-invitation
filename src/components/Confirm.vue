@@ -44,11 +44,11 @@ import { db } from '../firebase';
 //inicializamos store y obtenemos el uid de la familia
 const userLogget = JSON.parse(localStorage.getItem("user"));
 const store = useAuthStore();
-const uidFamilia = userLogget.uidFamilia;
+const uidFamilia = userLogget?.uidFamilia;
 
 //inicialisamos variables
-const invitados = userLogget.invitadosFamilia;
-const familia = userLogget.familia;
+const invitados = userLogget?.invitadosFamilia;
+const familia = userLogget?.familia;
 const invitadosConfirmados = [];
 
 

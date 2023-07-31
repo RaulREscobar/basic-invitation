@@ -12,15 +12,13 @@ import { useRoute, useRouter } from 'vue-router'
 const user = useAuthStore();
 const router = useRouter();
 const route = useRoute();
-
 const auth = getAuth();
-
-
 
 const logout = () => {
     localStorage.clear()
     signOut(auth).then(() => {
-        router.push({ name: 'login' })
+        /* router.push({ name: 'login' }) */
+        location.reload()
     }).catch((error) => {
         console.log('Hubo un error al desloguearte en firebase')
     });

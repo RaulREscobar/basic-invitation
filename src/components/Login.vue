@@ -34,13 +34,13 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue';
-import Paragraph from './Paragraph.vue'
+import { onMounted, watch } from 'vue';
+import Paragraph from './Paragraph.vue';
 import { useAuthStore } from "@/stores/AuthStore";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth, db } from '../firebase'
+import { auth, db } from '../firebase';
 import { getDocs, query, collection } from "@firebase/firestore";
-import { useRoute, useRouter } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router';
 
 const familiRef = query(collection(db, "famili"));
 const familias = await getDocs(familiRef);
@@ -48,8 +48,10 @@ const familias = await getDocs(familiRef);
 const form = false;
 const store = useAuthStore();
 
-const router = useRouter();
+
 const route = useRoute();
+const router = useRouter();
+
 
 onMounted(() => {
     store.loading = false;
@@ -77,14 +79,17 @@ const onSubmit = (e) => {
                         userLogget: true,
                         familia: familia.data().familia,
                         uidFamilia: familia.id,
-                        invitadosFamilia: familia.data().invitados
+                        invitadosFamilia: familia.data().invitados,
+                        rol: familia.data().rol,
                     }
                     localStorage.setItem("user", JSON.stringify(userSession))
                 }
             })
             // Reseteamos la  variable de estado para no mostrar el spinner.
             store.loadingLogin = false;
-            router.push({name: 'home'})
+            store.errorLogin = false;
+            /* router.push({name:'home'}) */
+            location.reload()
         })
         .catch((error) => {
             const errorCode = error.code;
@@ -93,6 +98,6 @@ const onSubmit = (e) => {
             store.errorLogin = true;
             // ..
         });
-}
+    }
 
 </script>

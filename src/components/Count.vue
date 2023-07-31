@@ -41,7 +41,8 @@ const hours = ref(0);
 const min = ref(0);
 const seg = ref(0);
 
-const dateTarget = new Date('2023-09-18T20:00:00');
+//FECHA DEL EVENTO FORMATO AAAA-MM-DD T HH:MM:SS
+const dateTarget = new Date('2023-09-15T20:00:00');
 const milisecondOfASecond = 1000;
 const milisecondsOfAMinute = milisecondOfASecond * 60;
 const milisecondsOfAHour = milisecondsOfAMinute * 60;
