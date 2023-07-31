@@ -2,7 +2,9 @@
   <KeepAlive>
     <BtnLogout />
   </KeepAlive>
-  <BtnMenu />
+  <KeepAlive>
+    <BtnMenu v-if="user.rol === 'admin'" />
+  </KeepAlive>
   <KeepAlive>
     <BtnMusic />
   </KeepAlive>
