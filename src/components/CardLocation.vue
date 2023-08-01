@@ -3,7 +3,7 @@
         <v-card class="text-center py-4" color="">
             <v-icon color="#D2BD80" icon="mdi-map-marker" size="70" type="outline"></v-icon>
             <v-card-title class="font">
-                IGLESIA
+                PARROQUIA
             </v-card-title>
             <v-card-text class="font">
                 Centenario 1399, San Antonio de Padua

@@ -7,16 +7,24 @@
         <v-dialog v-model="dialog" width="auto">
             <v-card>
                 <v-card-text class="text-center">
+                    <b>Mercado Pago</b>
+                    <br />
                     <b>CVU:</b>
-                    0000003100075320459939
+                    0000003100085665226567
                     <br />
                     <b>Alias:</b>
-                    lazaro-y-betiana
+                    Bety.laza.casamiento
                     <br />
-                    <b>CUIT/CUIL:</b>
-                    2035555562
                     <br />
-                    <b>Mercado Pago</b>
+                    <b>Bancaria</b>
+                    <br />
+                    <b>CBU:</b>
+                    0070062730004032208394
+                    <br />
+                    <b>Alias:</b>
+                    Bety.laza.boda
+                    <br />
+                
                 </v-card-text>
                 <v-card-actions>
                     <v-btn variant="tonal" color="#D2BD80" block @click="dialog = false">Cerrar</v-btn>

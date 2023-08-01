@@ -13,7 +13,8 @@
         </div>
         
         <p class="font w-50">
-            Con la bendición del amor y la alegría en nuestros corazones, nos complace invitarles a ser testigos de nuestro compromiso en el día de nuestra boda. Que vuestra presencia y amor nos acompañen mientras comenzamos este hermoso capítulo juntos.</p>
+            Nos complace invitarlos a ser partícipes de nuestra boda. Su presencia es importante y esperamos que nos acompañen para disfrutar de ese día tan especial.
+        </p>
     </v-container>
 </template>
 <style scoped>
