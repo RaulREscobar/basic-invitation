@@ -17,7 +17,7 @@ const isPlaying = ref(false);
 
 onActivated(() => {
     player.value.volume = 0.3;
-    //player.value.autoplay = true;
+    player.value.autoplay = true;
 })
 
 let play = () => {
