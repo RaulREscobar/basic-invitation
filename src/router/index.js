@@ -61,8 +61,15 @@ const routes = [
     {
         path: '/invitados/:totalInvitados',
         name: 'totalInvitados',
+        beforeEnter: (to, from, next) => {
+            if (!isLogget) {
+                next({ name: 'login' })
+            } else {
+                next()
+            }
+        },
         component: totalInvitadosView
-      },
+    },
 ]
 
 const router = createRouter({
