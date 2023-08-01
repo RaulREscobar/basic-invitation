@@ -1,10 +1,10 @@
 <template>
     <BtnMenu />
-    <DashboardAdmin />
+    <TotalInvitados />    
+    
 </template>
-
 <script setup>
 import BtnMenu from '@/components/BtnMenu.vue';
-import DashboardAdmin from '../components/DashboardAdmin.vue';
+import TotalInvitados from '@/components/TotalInvitados.vue'
 
 </script>

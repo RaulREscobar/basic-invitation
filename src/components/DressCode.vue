@@ -8,7 +8,7 @@
                 AÑOS '30
             </v-card-title>
             <v-card-text class="font">
-                Nod gustaría que vengas de época
+                Nos gustaría que vengas de época
                 <br/>
                 aquí van algunas ideas... 
             </v-card-text>

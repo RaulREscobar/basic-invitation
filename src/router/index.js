@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/views/HomeView.vue';
-import Invitados from '@/views/InvitadosView.vue'
+import Invitados from '@/views/InvitadosView.vue';
+import totalInvitadosView from '@/views/TotalInvitadosView.vue';
 import Login from '@/views/LoginView.vue';
 
 
@@ -29,6 +30,13 @@ const routes = [
         path: '/invitados',
         name: 'invitados',
         component: Invitados,
+        beforeEnter: (to, from, next) => {
+            if (userLogget.rol !== 'admin') {
+                next({ name: 'home' })
+            } else {
+                next()
+            }
+        },
         meta: {
             requireAuth: true,
             rol: 'admin',
@@ -49,7 +57,12 @@ const routes = [
             requireAuth: false,
             rol: null,
         },
-    }
+    },
+    {
+        path: '/invitados/:totalInvitados',
+        name: 'totalInvitados',
+        component: totalInvitadosView
+      },
 ]
 
 const router = createRouter({

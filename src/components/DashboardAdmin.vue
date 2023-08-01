@@ -41,8 +41,11 @@
   import { ref } from 'vue';
   import { db } from '../firebase'
   import { collection, query, onSnapshot } from "firebase/firestore";
-  import router from '@/router';
+  import { useRouter } from 'vue-router';
   
+//Inicializamos router
+const router = useRouter();
+
   //Declaramos las variables que vamos a mostrar.
   const totalInvitados = ref([]);
   const totalFamilias = ref([]);
