@@ -3,14 +3,14 @@
         <v-card class="text-center pa-3" >
             <v-icon color="#D2BD80" icon="mdi-pinterest" size="70" type="outline"></v-icon>
             <v-card-title class="font">
-                ALGUNAS IDEAS DE 
+                LA FIESTA VA A SER TEMATICA 
                 <br/>
-                VESTIMENTA...
+                AÑOS '30
             </v-card-title>
             <v-card-text class="font">
-                La fiesta va a ser tematica,
+                Nod gustaría que vengas de época
                 <br/>
-                nos gustaria que vengas... 
+                aquí van algunas ideas... 
             </v-card-text>
 
             <v-row justify="center">
@@ -25,7 +25,7 @@
                 </v-col>
             </v-row>
             <v-card-actions class="d-flex justify-space-around align-center mt-4">
-                <v-btn target="_blank" href="https://ar.pinterest.com/raulrescobar/lazaro-y-betiana/" variant="tonal" color="#D2BD80">
+                <v-btn target="_blank" href="https://pin.it/4W8jh2o" variant="tonal" color="#D2BD80">
                     VER MAS IDEAS
                 </v-btn>
             </v-card-actions>
