@@ -11,6 +11,7 @@
             <v-card-text class="font">
                 Por esta razón, una excelente opción es permitir que los novios elijan su propio regalo. Dejamos al pie un
                 link con nuestras cuentas.
+                <br />
                 Como alternativa, podrán disponer de un buzón en el salón donde pueden dejar un sobre o un espacio destinado
                 a recibir obsequios.
             </v-card-text>
