@@ -9,7 +9,10 @@
                 Sabemos lo complicado que puede ser buscar el obsequio ideal.
             </v-card-text>
             <v-card-text class="font">
-                Por esta razón, una excelente opción es permitir que los novios elijan su propio regalo. Como alternativa, podríamos disponer de un buzón en el salón donde puedan dejar un sobre o un espacio destinado a recibir sus obsequios.
+                Por esta razón, una excelente opción es permitir que los novios elijan su propio regalo. Dejamos al pie un
+                link con nuestras cuentas.
+                Como alternativa, podrán disponer de un buzón en el salón donde pueden dejar un sobre o un espacio destinado
+                a recibir obsequios.
             </v-card-text>
             <div class="d-flex justify-space-around align-center mt-4">
                 <Dialog :dialog="dialog" />
