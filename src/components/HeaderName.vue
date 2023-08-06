@@ -22,7 +22,7 @@
     background-image: url(../assets/fondo-invitacion-boda.png);
     background-repeat: no-repeat;
     background-size: contain ;
-    max-height: 100vh;
+    max-height: 600px;
     height: 100%;   
     max-width: 375px;
     display: flex;
