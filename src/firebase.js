@@ -1,27 +1,20 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from 'firebase/firestore'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBqAgox5v00c4B0_wsjkaPnHtOGriAL20A",
-  authDomain: "vivalosnovios-47c6a.firebaseapp.com",
-  databaseURL: "https://vivalosnovios-47c6a-default-rtdb.firebaseio.com",
-  projectId: "vivalosnovios-47c6a",
-  storageBucket: "vivalosnovios-47c6a.appspot.com",
-  messagingSenderId: "242735189832",
-  appId: "1:242735189832:web:bd32c0d7c38e561b63ed7d"
+  apiKey: "AIzaSyDQDQfPPIsZo-TQVc0_8sL-2MpHaAl13Mk",
+  authDomain: "inv-alejo-c3281.firebaseapp.com",
+  projectId: "inv-alejo-c3281",
+  storageBucket: "inv-alejo-c3281.appspot.com",
+  messagingSenderId: "881702266458",
+  appId: "1:881702266458:web:f4a8ff0e853b023f9c5a63"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-// Initialize Firebase Authentication and get a reference to the service
-const auth = getAuth(app);
-// Initialize Cloud Firestore and get a reference to the service
-const db = getFirestore(app)
 
 
 export { auth, db }

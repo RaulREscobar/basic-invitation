@@ -1,36 +1,36 @@
 <template>
-    <h1 class="font">¿ Cuanto Falta ?</h1>
-    <v-container class=" font d-flex justify-space-evenly mb-10">
+    <h1 class="text-center text-h5">¿ Cuanto Falta ?</h1>
+    <v-container class=" text-center text-h5 d-flex justify-space-evenly">
         <div class="d-flex flex-column">
-            <span>{{ days }}</span>
+            <span class="mb-4">{{ days }}</span>
             <span>DIAS</span>
         </div>
         :
         <div class="d-flex flex-column">
-            <span>{{ hours }}</span>
+            <span class="mb-4">{{ hours }}</span>
             <span>HORAS</span>
         </div>
         :
         <div class="d-flex flex-column">
-            <span>{{ min }}</span>
+            <span class="mb-4">{{ min }}</span>
             <span>MIN.</span>
         </div>
         :
         <div class="d-flex flex-column">
-            <span> {{ seg }}</span>
+            <span class="mb-4"> {{ seg }}</span>
             <span>SEG.</span>
         </div>
     </v-container>
 </template>    
 
 <style scoped>
- .count {
-     width: 100vw;
- }
+.count {
+    width: 100vw;
+}
 
- .bg body {
-     background-color: #121212;
- }
+.bg body {
+    background-color: #121212;
+}
 </style>
 
 <script setup>
@@ -42,7 +42,7 @@ const min = ref(0);
 const seg = ref(0);
 
 //FECHA DEL EVENTO FORMATO AAAA-MM-DD T HH:MM:SS
-const dateTarget = new Date('2023-09-15T20:00:00');
+const dateTarget = new Date('2023-08-20T13:00:00');
 const milisecondOfASecond = 1000;
 const milisecondsOfAMinute = milisecondOfASecond * 60;
 const milisecondsOfAHour = milisecondsOfAMinute * 60;

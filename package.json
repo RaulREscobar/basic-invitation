@@ -1,6 +1,6 @@
 {
-  "name": "lazaro-y-betiana",
-  "version": "0.0.0",
+  "name": "basic-invitation",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,7 +10,7 @@
     "animate.css": "^4.1.1",
     "firebase": "^9.17.1",
     "firebase-admin": "^11.5.0",
-    "pinia": "^2.0.30",
+    "pinia": "^2.1.6",
     "roboto-fontface": "*",
     "vue": "^3.2.38",
     "vue-router": "^4.2.4",

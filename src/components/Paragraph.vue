@@ -1,9 +1,7 @@
 <template>
-    <v-container >
-        <p class="font">
-            {{ text }}
-        </p>
-    </v-container>
+    <p class="text-center mb-2">
+        {{ text }}
+    </p>
 </template>
 <script>
 export default {

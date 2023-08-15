@@ -1,33 +1,25 @@
 <template>
-    <v-container class="bg-flower">
-        <div class="d-flex flex-column">
-            <h1 class="font-title mb-2">
-                Lázaro 
-            </h1>
-            <h1 class="font-title mb-3">
-                y
-            </h1>
-            <h1 class="font-title">
-                Betiana
+    <v-container class="bg-arg">
+        <div class="text-center">
+            <h1 class="">
+                FESTEJAMOS
+                <br />
+                MIS 11 AÑOS ?
             </h1>
         </div>
-        
-        <p class="font w-50">
-            Nos complace invitarlos a ser partícipes de nuestra boda. Su presencia es importante y esperamos que nos acompañen para disfrutar de ese día tan especial.
-        </p>
     </v-container>
 </template>
 <style scoped>
-.bg-flower {
-    background-image: url(../assets/fondo-invitacion-boda.png);
+.bg-arg {
+    background-image: url(../assets/bg-arg.jpeg);
     background-repeat: no-repeat;
-    background-size: contain ;
+    background-size: contain;
     max-height: 600px;
-    height: 100%;   
-    max-width: 375px;
+    height: 32%;
+    max-width: 355px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: end;
     gap: 55px;
     align-items: center;
 }
@@ -35,7 +27,8 @@
 .font {
     text-align: center;
 }
-@media (width < 345px){
+
+@media (width < 345px) {
     .font {
         font-size: 16px;
     }
